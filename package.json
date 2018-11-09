@@ -1,7 +1,28 @@
-//package.json
-//Файл инструкций к пакетам Node.Js
-
 {
-
+  "name": "phpmysql_rusakov_byazwebdds",
+  "description": "PHP и MySQL с нуля до гуру. Видеокурс по основам PHP и MySQL. Автор Михаил Русаков. Версия 2.0 (2017). Репак by AZWebDDS.",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-cache": "^1.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-images-resizer": "0.0.5",
+    "pngquant": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AZWebDDS/PHPMySQL-s-NulaDoGuru-2-Rusakov-Videokurs.git"
+  },
+  "author": "Rusakov and repack by AZWebDDS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AZWebDDS/PHPMySQL-s-NulaDoGuru-2-Rusakov-Videokurs/issues"
+  },
+  "homepage": "https://github.com/AZWebDDS/PHPMySQL-s-NulaDoGuru-2-Rusakov-Videokurs#readme"
 }
-

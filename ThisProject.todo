@@ -4,14 +4,14 @@ ThisProject.todo
 
 ОБЩИЕ ПРИНЦИПЫ данного WEB проекта:
 ------------------------------------
-  - 
+  - Используется Gulp 
   ... и т.д.
   ---- ✄ -----------------------
 
 ТАЙМИНГ проекта:
 ----------------
- ☐ Создан:
- ☐ Deadline:
+ ☐ Создан: @created(03-11-2018 01:33)
+ ☐ Deadline: @due(05-11-2018 20:00)
  ☐ Общая продолжительность: 
 
   Тайминг по дням:
@@ -43,6 +43,86 @@ ThisProject.todo
  ☐ 
   ... и т.д
   ---- ✄ -----------------------
+
+ПРИМЕЧАНИЯ и ЗАМЕТКИ:
+----------------------
+ ☐ Использование Gulp @gulp
+   [Статья по Gulp](https://webdesign-master.ru/blog/tools/2016-03-09-gulp-beginners.html)
+   ☐ Проверить установлен ли в системе Node.Js и Gupl (глобально):
+      $ node --version
+        v9.7.1
+      $ gulp --version
+        3.9.1
+   ☐ Инициализировать проект (локально в каталоге проекта пересоздается файл package.json):
+      $ npm init
+   ☐ Установить в проект Gulp (локально в каталоге проекта пересоздается каталог node_modules)
+      $ npm i gulp --save-dev
+   ☐ Файл gulpfile.js @gulpfile.js
+
+     ☐ Первичные настройки файла gulpfile.js 
+       var gulp = require('gulp'); //Подключение Gulp из папки node_modules к проекту в переменную gulp
+
+       //Пробный таск
+       gulp.task('mytask', function() {
+       console.log('Привет, я таск!');
+       });
+
+       Проверить работу пробного таска в командной строке
+       $ gulp mytask
+
+     ☐ Обработка изображений
+       Перенос изображений из каталога ресурсов в продакшин с их оптимизацией
+
+       - Установить и подключить пакеты для оптимизации изображений
+         $ npm i gulp-imagemin imagemin-pngquant --save-dev
+
+       - В переменную var подключить пакеты для обработки изображений
+         imagemin    = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
+         pngquant    = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
+
+       - Создать таск img для сжатия изображений (для продакшина)
+       gulp.task('img', function() {
+           return gulp.src('app/img/**/*') //Берем все изображения из app
+               .pipe(imagemin({ //Сжимаем их с наилучшими настройками
+                     interlaced: true,
+                     progressive: true,
+                     svgoPlugins: [{removeViewBox: false}],
+                     use: [pngquant()]
+               }))
+               .pipe(gulp.dest('dist/img')); //Выгружаем на продакшин
+       });
+
+
+
+gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+
+    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+        'app/css/main.css',
+        'app/css/libs.min.css'
+        ])
+    .pipe(gulp.dest('dist/css'))
+
+    var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+    .pipe(gulp.dest('dist/fonts'))
+
+    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    .pipe(gulp.dest('dist/js'))
+
+    var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
+    .pipe(gulp.dest('dist'));
+
+});
+
+
+
+        и вызовем его после очистки:
+
+
+
+  ... и т.д
+  ---- ✄ -----------------------
+
+=============================================================================================================================================================================================================================================
 
 АРХИВ:
 -------
