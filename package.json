@@ -7,6 +7,7 @@
     "gulp-cache": "^1.0.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-images-resizer": "0.0.5",
