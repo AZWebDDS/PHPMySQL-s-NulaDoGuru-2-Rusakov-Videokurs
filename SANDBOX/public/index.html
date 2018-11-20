@@ -3,33 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!--
-TODO
-@todo Установить русский спелчеккер (английский уже установлен)
--->
+    <header>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1 class="display-1">PHP и MySQL</h1>
+                <p class="lead display-3">c нуля до гуру<br>ver. 2.0
+                    <span class="lead display-4">by Михаил Русаков</span>
+                </p>
+                <hr class="my-2">
+                <div class="alert alert-info display-4">Видеокурс с примерами кода<br>
+                и домашними заданиями</div>
+            </div>
+        </div>
+    </header>
 
-<div class="container-fluid">
-    <div class="jumbotron">
-        <h1 class="display-1">PHP ghgfgfhf и MySQL</h1>
-        <p class="lead display-3">c нуля до гуру<br>ver. 2.0</p>
-        <hr class="my-2">
-        <p>More info</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="http://google.com" role="button">Jumbo action name</a>
-        </p>
-    </div>
-</div>
+    <main>
+
+        <div class="container-fluid">
+
+            <!-- Раздел 4 . Объектно-ориентированное программирование в PHP -->
+            <section>
+                <h2>Раздел 4.<br>
+                Объектно-ориентированное программирование в PHP</h2>
+                <hr>
+
+                <section class="card-deck mb-3">
+                    <!-- Занятие 1. Что такое ООП? -->
+                    <article class="card bg-light">
+                        <div class="card-header">Занятие 1</div>
+                        <div class="card-body">
+                            <div class="card-block">
+                                <h3 class="card-title">Что такое ООП?</h3>
+                                <a href="https://mega.nz/#!iPgDXa6Z!Rq3AlK-t3AIhU5wV4qh3AuCuqKC5UkLa5FP7DSURvwo" target="_blank" class="card-link">Видеоурок 4.1. Что такое ООП?</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Занятие 2. Три кита ООП -->
+                    <article class="card bg-light">
+                        <div class="card-header">Занятие 2</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Три кита ООП</h3>
+                            <a href="https://mega.nz/#!PS4zVIDJ!6qsPJ01MdDrjSBf2w7tlcbz97pPv8NqDAlg_TKK0Sqw" target="_blank" class="card-link">Видеоурок 4.2. Три кита ООП</a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="card-deck mb-3">
+                    <!-- Занятие 3. Создание класса в PHP -->
+                    <article class="card bg-light">
+                        <div class="card-header">Занятие 3</div>
+                        <div class="card-body">
+                            <h3 class="card-title">Создание класса в PHP</h3> 
+                            <a href="https://mega.nz/#!eThDzC6b!zuSRKZMWAcEWo0iJampBfcLIxvmoW9_qhJ373N3MC7M" target="_blank" class="card-link">Видеоурок 4.3. Создание класса в PHP</a>
+                            <div class="card-text">Домашнее задание:</div>
+                            <ul class="card-text">
+                                <li>Создайте класс Point (точка).</li>
+                                <li>Добавьте в него 2 свойства: x и y (координаты).</li>
+                                <li>Создайте объект класса Point.</li>
+                                <li>Установите свойства x и y в значения 5 и 3 у объекта из 3-го пункта.</li>
+                                <li>Выведите оба свойства объекта из 3-го пункта.</li>
+                            </ul>
+                            <div class="card-text">Исходники:
+                                <a href="sources/lesson-4-3/index.php" target="_blank" class="card-link">скачать образец кода к уроку 4.3</a> 
+                            </div>
+                        </article>
+
+                        <!-- Занятие 4. Конструктор, деструктор и методы -->
+                        <article class="card bg-light">
+                            <div class="card-header">Занятие 4</div>
+                            <div class="card-body">
+                                <h3 class="card-title">Конструктор, деструктор и методы</h3>
+                                <a href="https://mega.nz/#!PWgDkabL!oLPCozxNPDWat1VbNalxyhUJMLDJrbvTOwcRw7jvb8Q" target="_blank" class="card-link">Видеоурок 4.4. Конструктор, деструктор и методы</a>
+                                <div class="card-text">Домашнее задание:</div>
+                                <ul class="card-text">
+                                    <li>Добавьте в класс, созданный в предыдущем упражнении, конструктор, принимающий x и y.</li>
+                                    <li>Внутри конструктора присвойте полям значения, полученные в параметрах конструктора.</li>
+                                    <li>Напишите GET и SET методы.</li>
+                                    <li>Проверьте правильность их работы.</li>
+                                </ul>
+                                <p><i>Примечание: Вы должны самостоятельно понять, как убедиться, что всё работает верно: какие методы надо выполнить и какие выводы в браузер сделать.</i></p>
+                                <div class="card-text">Исходники:
+                                    <a href="sources/lesson-4-4/index.php" target="_blank">скачать образец кода к уроку 4.4</a>
+                                </div>
+                            </div> <!-- /.card-body -->
+                        </article>
+                    </section>
+
+                    <!-- Занятие 5. Модификаторы доступа -->
+                    <article>
+                        <h3>Занятие 5.<br>
+                        Модификаторы доступа</h3>
+                        <a href="https://mega.nz/#!6HglSQAD!nIvyXotB73Q-5tQaW8Yq7TyYU6BNGMCO2NqwFHsLquQ" target="_blank">Видеоурок 4.5. Модификаторы доступа</a>
+                        <p>Домашнее задание:</p>
+                        <ul>
+                            <li>Сделайте в классе из предыдущего упражнения оба свойства – private.</li>
+                            <li>Попытайтесь получить доступ к свойству напрямую. Изучите получившуюся ошибку.</li>
+                            <li>Воспользуйтесь методами GET и SET, чтобы получить доступ к свойствам: сначала установив значения свойств x и y (с помощью методов SET), а после выведя получившиеся значения в браузер (с помощью методов GET.</li>
+                        </ul>
+                        <p>Исходники:
+                            <a href="sources/lesson-4-5/index.php" target="_blank">скачать образец кода к уроку 4.5</a>
+                        </p>
+                    </article>
+
+                    <!-- Занятие 6. Статические свойства и методы -->
+                    <article>
+                        <h3>Занятие 6.<br>
+                        Статические свойства и методы</h3>
+                        <a href="https://mega.nz/#!yXQURSRI!T1rMJ7hEKFHSjV4vAaft_LiGAMH_E6MtHv99oZHA3yw" target="_blank">Видеоурок 4.6. Статические свойства и методы</a>
+                        <p>Домашнее задание:</p>
+                        <ul>
+                            <li>Добавьте в класс Point (из предыдущего упражнения) статическое свойство counter, изначально равное 0.</li>
+                            <li>Добавьте в конструктор инкремент этого статического свойства. По сути, это будет счётчик объектов.</li>
+                            <li>Добавьте статический метод, возвращающий свойство counter.</li>
+                            <li>Создайте 3 объекта и выведите с помощью метода из 3-го пункта значение counter. Убедитесь, что оно равно 3.</li>
+                        </ul>
+                        <p>Исходники:
+                            <a href="sources/lesson-4-6/index.php" target="_blank">скачать образец кода к уроку 4.6</a>
+                        </p>
+                    </article>
+
+                    <!-- Занятие 7. "Магические" методы -->
+                    <article>
+                        <h3>Занятие 7.<br>
+                        "Магические" методы</h3>
+                        <a href="https://mega.nz/#!CSAhgCgK!tJmwwrhM0Y0okF1rgqThwmBlK0YaGTm4h6UKKSwzGk4" target="_blank">Видеоурок 4.7. "Магические" методы</a>
+                        <p>Домашнее задание:</p>
+                        <ul>
+                            <li>Добавьте в класс Point (из предыдущего упражнения) метод __toString() и реализуйте его, вернув строку такого вида: «Точка с координатами (x, y)». Безусловно, вместо x и y должны быть конкретные значения.</li>
+                            <li>Создайте 3 разных объекта класса Point и выведите их через echo.</li>
+                            <li>Реализуйте метод __get(), в котором при обращении к несуществующему свойству z будет выведено сообщение «Класс Point работает только в двумерном пространстве».</li>
+                            <li>Аналогично сделайте метод __set() при попытке изменить свойств z.</li>
+                            <li>Так же реализуйте метод call(), в котором выведите ту же строку, что и в пункте 3, при попытке вызвать метод setZ().</li>
+                            <li>Создайте 1 объект класса Point и сделайте его клон. Убедитесь, что клонирование прошло успешно, попытавшись изменить свойство любого из объектов и выведя это свойство у обоих объектов. Они должны быть различны.</li>
+                        </ul>
+                        <p>Исходники:
+                            <a href="sources/lesson-4-7/index.php" target="_blank">скачать образец кода к уроку 4.7</a>
+                        </p>
+                    </article>
+
+                    <!-- Занятие 8. Сериализация объектов -->
+                    <article>
+                        <h3>Занятие 8.<br>
+                        Сериализация объектов</h3>
+                        <a href="https://mega.nz/#!DXwwQSbb!RgcBnPZfyrLMxpsKKEZbyrv8znFy3d5ZcHzVuCVUJCo" target="_blank">Видеоурок 4.8. Сериализация объектов</a>
+                        <p>Домашнее задание:</p>
+                        <ul>
+                            <li>Сделайте форму с двумя полями: x и y. Также добавьте кнопки: «Сохранить» и «Загрузить».</li>
+                            <li>При вводе x и y и нажатии кнопки «Сохранить» должен быть создан объект класса Point, который необходимо сериализовать.</li>
+                            <li>При нажатии кнопки «Загрузить» в поля x и y должны быть подставлены координаты сериализованного объекта.</li>
+                        </ul>
+                        <p>Примечание: Обязательно выводите различные предупреждения. Например, при попытке «Загрузить» ещё не сохранённый объект или сохранить без заполненных или некорректных полей x и y. Также выводите информацию об успешном сохранении и об успешной загрузке.</p>
+                        <p>Исходники:
+                            <a href="sources/lesson-4-8/index.php" target="_blank">скачать образец кода к уроку 4.8</a>
+                        </p>
+                    </article>
+                </section>
+
+            </div> <!-- /.container-fluid -->
+        </main>
 
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-Михаил Русаков
-
-
-Видеокурс с примерами кода и домашними заданиями
-
-</body>
-</html>
+    </body>
+    </html>
